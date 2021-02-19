@@ -1,0 +1,891 @@
+/* font-family: subway-berlin-std, sans-serif; 
+font-family: subway-berlin-sc, sans-serif; 
+
+*/
+
+
+/*
+font-family: realist, sans-serif;
+font-weight: 400;
+font-style: normal;
+*/
+
+@font-face {
+    font-family: alarmNormal;
+    src: url(./fonts/DS-DIGI.TTF);
+}
+
+@font-face {
+    font-family: alarmBold;
+    src: url(./fonts/DS-DIGIB.TTF);
+}
+
+@font-face {
+    font-family: alarmBlack;
+    src: url(./fonts/DS-DIGIT.TTF);
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #080611;
+    font-size: 30px;
+}
+
+.landingTitle {
+    font-family: subway-berlin-std, sans-serif;
+    font-weight: 200;
+    color: #e6e6e6;
+    font-size: 1rem;
+    margin: auto;
+    width: 100%;
+    min-width: 1000px;
+    position: absolute;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.lightcontainer {
+    width: 1000px;
+    z-index: 2;
+}
+
+.pjtHeader {
+    font-family: subway-berlin-std, sans-serif;
+    position: fixed;
+    opacity: 1;
+    top: 1%;
+    width: 70%;
+    min-width: 1000px;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #ffffff;
+    opacity: 0;
+    z-index: 3
+}
+
+.headerBox {
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.26);
+    height: 4%;
+    top: 0%;
+    position: fixed;
+    opacity: 0;
+    z-index: 3
+}
+
+#light1,
+#light2,
+#light3,
+#light4 {
+    display: inline;
+    position: absolute;
+    top: 10%;
+    height: 700px;
+    fill-opacity: 0.8
+}
+
+#light1 {
+    left: 0%;
+    transform-origin: top center;
+    transform: rotate(-30deg)
+}
+
+#light2 {
+    left: 5%;
+    transform-origin: top center;
+    transform: rotate(-30deg)
+}
+
+#light3 {
+    right: 5%;
+    transform-origin: top center;
+    transform: rotate(30deg)
+}
+
+#light4 {
+    right: 0%;
+    transform-origin: top center;
+    transform: rotate(30deg)
+}
+
+.contents {
+    z-index: 0;
+    min-width: 1000px;
+    width: 70%;
+    align-content: center;
+    margin: auto;
+    position: relative;
+}
+
+.contents>.subTitle {
+    font-family: Sofia-pro;
+    font-weight: 100;
+    font-size: 0.5rem;
+    color: #e6e6e6;
+    width: 40%;
+    min-width: 300px;
+    margin: auto;
+    position: relative;
+}
+
+.contents>.vinyl {
+    width: 300px;
+    display: block;
+    position: fixed;
+    filter: blur(0.5px);
+    opacity: 0.8;
+    transform-origin: center;
+    animation: rotation 2s infinite linear;
+    perspective: 450px;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes recordTransition {
+    from {
+        transform: rotate3d(1, 0, 0, 0deg)
+    }
+    to {
+        transform: rotate3d(1, 0, 0, 75deg)
+    }
+}
+
+@keyframes turntable {
+    from {
+        left: 50%;
+        transform: translate(-50%, 0) rotate3d(1, 0, 0, 75deg) rotate(0deg);
+    }
+    to {
+        left: 50%;
+        transform: translate(-50%, 0) rotate3d(1, 0, 0, 75deg) rotate(360deg);
+    }
+}
+
+hr {
+    width: 30px;
+    border-bottom: 5px dotted #e6e6e6;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 15px;
+}
+
+.videocontainer {
+    position: absolute;
+    width: 100%;
+    min-width: 1000px;
+    overflow-y: hidden;
+}
+
+.videodescription {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: #e6e6e6;
+    width: 40%;
+    min-width: 300px;
+    opacity: 0;
+}
+
+.videodescription>h1 {
+    font-family: sofia-pro;
+    font-size: 1rem
+}
+
+.actuallyrics {
+    font-family: realist;
+    background: rgba(93, 93, 93, 0.603);
+    padding: none;
+    padding-top: 30px;
+    margin-top: 15px;
+    height: 350px;
+    overflow-y: scroll;
+    font-size: 0.5rem;
+    opacity: 0.8;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+
+.actuallyrics>.lyrics {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.firstsong {
+    position: absolute;
+    bottom: 2%;
+    right: 0%;
+    color: #e6e6e6;
+    font-size: 0.6rem;
+    font-family: sofia-pro;
+    opacity: 0;
+}
+
+.highText {
+    font-family: sofia-pro;
+    color: #F74F4F;
+    font-weight: 400;
+    font-size: 0.6rem
+}
+
+.videodescription>.nonhighText {
+    font-family: sofia-pro;
+    font-weight: 100;
+    font-size: 0.6rem;
+}
+
+video {
+    width: 100%;
+    min-width: 1000px;
+    opacity: 0.3;
+    filter: blur(4px)
+}
+
+.videoclip {
+    opacity: 0;
+    width: 1500px;
+    position: absolute;
+    left: -20%;
+}
+
+.graphbox {
+    width: 100%;
+    padding-top: 50px;
+    position: absolute;
+}
+
+.distribution {
+    width: 70%;
+    min-width: 600px;
+    height: 500px;
+    opacity: 0;
+}
+
+.distributionTitle {
+    color: #ffffff;
+    fill: #ffffff;
+    font-size: 0.6em;
+    font-family: sofia-pro
+}
+
+.graphtitle {
+    color: #F74F4F;
+    font-size: 0.4em;
+    font-style: oblique;
+    font-family: sofia-pro;
+    position: absolute;
+    left: 10%;
+    top: 72%;
+    opacity: 0;
+}
+
+.wordcount {
+    font-size: 0.4rem;
+    color: #F74F4F;
+}
+
+.wordCount,
+p {
+    padding: 0;
+}
+
+.xAxis,
+.yAxisSM,
+.yAxisBG,
+.BGgrid,
+.SMgrid {
+    stroke: #aaaaaa;
+    color: #aaaaaa;
+}
+
+.xAxis {
+    font-size: 14px;
+}
+
+.xAxis>text {
+    color: #ffffff
+}
+
+.xAxis>.domain {
+    stroke-width: 0.3px;
+}
+
+.BGgrid,
+.SMgrid {
+    stroke-width: 0.1px;
+    stroke-dasharray: 5;
+    opacity: 1
+}
+
+.breakline {
+    stroke-width: 2px;
+    opacity: 0.4;
+    stroke-dasharray: 0;
+    /* color: gold; */
+}
+
+.tick>text {
+    font-size: 10px;
+    font-weight: 100;
+    opacity: 0.5
+}
+
+.tick>.breaklinetext {
+    opacity: 1;
+    /* stroke: gold; */
+    font-size: 12px;
+}
+
+.decadeselection {
+    opacity: 0;
+    position: absolute;
+    width: 1000px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.decadeselection>.buttonheader {
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.equalizer {
+    opacity: 0;
+    position: absolute;
+    width: 1000px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.equalizer>.equalizerheader {
+    color: #ffffff;
+    font-family: realist;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 5%;
+    position: relative;
+}
+
+.equalizerheader>.headermsg {
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-style: oblique
+}
+
+.equalizerheader>.headerdescription {
+    width: 40%;
+    margin: auto;
+    justify-content: start;
+    font-size: 0.4rem;
+}
+
+.buttonheader>.headermsg {
+    font-family: sofia-pro;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-style: oblique
+}
+
+.buttonheader>.headerdescription {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 40%;
+    top: 12%;
+    margin: auto;
+    justify-content: start;
+    font-size: 0.4rem;
+}
+
+.equalizer>.equalizergraph {
+    width: 100%;
+    min-width: 1000px;
+    height: 450px;
+    position: relative;
+    top: 0%;
+}
+
+.eqXaxisText {
+    fill: #4FF75C;
+    font-size: 0.4rem;
+    text-anchor: middle;
+    font-family: alarmNormal;
+    opacity: 0.8
+}
+
+.eqYaxisText {
+    fill: #4FF75C;
+    font-size: 0.4rem;
+    font-family: alarmNormal;
+    opacity: 0.8;
+    text-anchor: end;
+}
+
+.eqRect {
+    opacity: 0.8;
+    stroke: none;
+}
+
+.buttoncontainer {
+    display: grid;
+    grid-auto-flow: column;
+    width: 1000px;
+    margin-top: 15%;
+}
+
+.button {
+    position: relative;
+    top: 10%;
+    width: 200px;
+    height: 320px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.4
+}
+
+.button:hover {
+    font-size: 1rem;
+    opacity: 1;
+}
+
+.pic {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.pic:hover {
+    box-shadow: 2px 2px 1px #EAF74F
+}
+
+.lp {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.eraDesc {
+    width: 100%;
+    position: absolute;
+    color: #ffffff;
+    font-family: subway-berlin-std, sans-serif;
+    bottom: 5%;
+    text-align: center;
+}
+
+.msg {
+    position: absolute;
+    width: 300px;
+    font-family: Sofia-pro;
+    color: #e6e6e6;
+    border: solid 3px #4FF75C;
+    font-size: 0.5rem;
+    right: 0%;
+    /* background-color: #5a5a5a; */
+    /* box-shadow: 2px 0px 3px #EAF74F; */
+    height: 100px;
+}
+
+.msg p {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.methodology {
+    font-family: Sofia-pro;
+    color: #e6e6e6;
+    font-size: 0.4rem;
+    opacity: 0;
+    position: fixed;
+    width: 60%;
+    min-width: 500px;
+}
+
+.methodTitle {
+    font-size: 0.6rem;
+    font-family: Sofia-pro;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.makinguniques {
+    color: #e6e6e6;
+    width: 50%;
+    min-width: 200px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    margin: auto;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.words {
+    opacity: 0.6;
+    color: #e6e6e6;
+    font-size: 0.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.unique {
+    opacity: 1;
+    color: rgba(251, 255, 0, 0.753);
+    animation: litup 6s
+}
+
+.fadeaway {
+    opacity: 0.1;
+}
+
+@keyframes litup {
+    from {
+        color: #e6e6e6;
+    }
+    to {
+        color: rgb(251, 255, 0);
+    }
+}
+
+.uniqueTitle {
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* .uniqueexample {
+    color: #e6e6e6;
+    position: absolute;
+    text-align: start;
+    font-style: italic;
+    width: 200px
+} */
+
+.equalizerheader {
+    position: relative;
+    top: 5%;
+}
+
+.artistImgs {
+    width: 180%;
+    min-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(5 1fr);
+    grid-auto-flow: column;
+    position: absolute;
+    left: -35%;
+    top: 100px;
+    gap: 5px;
+}
+
+.notableArtists {
+    width: 100%;
+    filter: blur(1px);
+    opacity: 0.2;
+}
+
+.player {
+    position: fixed;
+    bottom: 5%;
+    color: #ffffff;
+    width: 70%;
+    min-width: 1000px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+    font-size: 0.4rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: realist, sans-serif;
+    font-size: 0.4rem;
+    opacity: 0
+}
+
+
+/* .player {
+    position: fixed;
+    left: 0%;
+    bottom: 10%;
+    color: #ffffff;
+    width: 70%;
+    min-width: 1000px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
+    font-size: 12px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: realist, sans-serif;
+    opacity: 1
+} */
+
+.icon {
+    fill: #F74F4F;
+    cursor: pointer;
+}
+
+.controllbuttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* controlbutton layout should change? */
+
+
+/* .controllbuttonsrev {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+} */
+
+.status {
+    width: 100%;
+    text-align: start
+}
+
+.iconname {
+    width: 100%;
+    text-align: center;
+    opacity: 0.8
+}
+
+.playingobj {
+    font-family: alarmNormal;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    opacity: 0.7;
+    background-color: #194e1d81;
+    padding: 5px 5px;
+    width: 300px;
+    animation: blinker infinite 1s
+}
+
+.iconcontainer {
+    margin-top: 10px;
+    display: block;
+    width: 30%;
+    opacity: 0.8
+}
+
+.eject {
+    fill: #ffffff;
+}
+
+.crossbar {
+    position: fixed;
+    width: 100%;
+    height: 2px;
+    background-color: #4FF75C;
+    bottom: 60%;
+    opacity: 0.7;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0.3;
+    }
+}
+
+#myCanvas {
+    position: absolute;
+    top: 0px;
+    font-family: realist, sans-serif;
+}
+
+#mySvg {
+    position: absolute;
+    top: 10%;
+    font-family: realist, sans-serif;
+    display: none;
+}
+
+.yearbtn {
+    border: solid #226527 2px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #133a16;
+    filter: blur(1px);
+    margin: auto;
+    margin-top: 10%;
+}
+
+.switch {
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    background-color: #4a4b4a81;
+    filter: blur(1px);
+    margin: auto;
+    margin-bottom: 10%;
+    cursor: pointer;
+}
+
+.yearbtnselected {
+    background-color: #41c94c;
+    filter: blur(2px)
+}
+
+.switchselected {
+    background-color: #F74F4F;
+    filter: blur(2px)
+}
+
+.canvasDesc {
+    position: absolute;
+    width: 30%;
+    height: 80%;
+    right: 0%;
+    top: 10%;
+}
+
+.canvasDesc {
+    color: #EBEBEB;
+    font-family: realist;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.canvasDescTitle {
+    margin-top: 15%;
+    font-weight: 200;
+}
+
+.canvasDescSub {
+    margin-top: 10%;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.disLegend {
+    width: 100%;
+}
+
+.top10 {
+    color: #EBEBEB;
+    position: absolute;
+    font-family: realist;
+    font-weight: 100;
+    font-size: 15px;
+    width: 30%;
+    height: 60%;
+    right: 0%;
+    top: 55%;
+}
+
+.top10Desc {
+    width: 100%;
+}
+
+.top10wordsbox {
+    font-family: alarmNormal;
+    color: #4FF75C;
+    font-size: 12px;
+    width: 100%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(5 1fr);
+    grid-template-rows: 30px 30px;
+    grid-auto-flow: column;
+}
+
+.tenwords {
+    opacity: 0.4;
+    height: 15px;
+    width: 80%;
+    cursor: pointer;
+}
+
+.tenwordsSelected {
+    border-bottom: solid 1px yellow;
+    opacity: 1;
+}
+
+.coverXaxis,
+.coverYaxis {
+    stroke: #EBEBEB;
+    stroke-width: 0.5px;
+}
+
+.coverYaxis>.domain,
+.coverXaxis>.domain {
+    stroke: #EBEBEB;
+    stroke-width: 0.3px;
+}
+
+.tick>text {
+    color: #EBEBEB
+}
+
+line {
+    stroke: #EBEBEB;
+}
+
+.coverline {
+    stroke: #4FF75C;
+    stroke-width: 0.5px;
+}
+
+.Ygrid,
+.Xgrid {
+    stroke-width: 0.2px;
+    stroke-dasharray: 1px;
+}
+
+.WordChosen {
+    fill: #F74F4F;
+    font-size: 12px;
+}
+
+.WordCovered {
+    fill: #F74F4F;
+    font-size: 12px;
+}
+
+.lastsummary {
+    position: absolute;
+    width: 1000px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+}
+
+.backgroundIMG {
+    position: fixed;
+    opacity: 0.2;
+    filter: blur(3px);
+    z-index: 0;
+    visibility: hidden;
+}
