@@ -422,7 +422,7 @@ function showDistribution(e) {
     $('#mySvg').css('display', 'none')
     $('#myCanvas').css('display', 'block')
         // $('.disLegend').css('display', 'block')
-    $('.disLegend').attr("src", "./imgs/disLegend.png");
+    $('.disLegend').attr("src", "./imgs/DisLegend.png");
     $('.disLegend').css({ 'position': 'relative', 'top': '0px' });
     $('.top10').css('display', 'block')
     svgMode = false;
