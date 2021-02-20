@@ -15,6 +15,7 @@ export const scrollcontroll = () => {
             end: `+=${pageSize*2}px top`,
             pin: '.videoclip',
             onEnter: () => {
+                $('body').css('overflow-x', 'hidden')
                 $('.pjtHeader').animate({ 'opacity': 1 }, 1000)
                 $('.headerBox').animate({ 'opacity': 1 }, 1000)
                 console.log('calling once');

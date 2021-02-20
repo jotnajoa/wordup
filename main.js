@@ -84,7 +84,8 @@ $('.subTitle').css('top', `${pageSize*1/5}px`)
 $('.videocontainer').css('top', `${pageSize*1.5}px`)
 $('.videocontainer').css('height', `${pageSize}px`)
 $('.videodescription').css('top', `${pageSize*1.6}px`)
-
+$('.videoclip').css('width', `${window.innerWidth}px`)
+$('.videocontainer').css('width', `${window.innerWidth}px`)
 $('.graphbox').css('top', `${pageSize*6}px`);
 $('.graphbox').css('left', `0%`);
 $('.graphbox').css('height', `${pageSize*1}px`);
