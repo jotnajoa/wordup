@@ -358,7 +358,7 @@ p {
 
 .decadeselection>.buttonheader {
     color: #ffffff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sofia pro;
     font-size: 0.8rem;
     font-weight: 300;
     text-align: center;
@@ -503,15 +503,15 @@ p {
     width: 300px;
     font-family: Sofia-pro;
     color: #e6e6e6;
-    border: solid 3px #4FF75C;
+    border: solid 2px #4FF75C;
     font-size: 0.5rem;
     right: 0%;
     /* background-color: #5a5a5a; */
     /* box-shadow: 2px 0px 3px #EAF74F; */
-    height: 100px;
+    height: 120px;
 }
 
-.msg p {
+.msg>p {
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -550,7 +550,8 @@ p {
     opacity: 0.6;
     color: #e6e6e6;
     font-size: 0.4rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sofia-pro;
+    ;
 }
 
 .unique {
