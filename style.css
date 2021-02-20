@@ -30,7 +30,7 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
-    background-color: #080611;
+    background-color: #020202;
     font-size: 30px;
 }
 
@@ -163,11 +163,11 @@ body {
 @keyframes turntable {
     from {
         left: 50%;
-        transform: translate(-50%, 0) rotate3d(1, 0, 0, 75deg) rotate(0deg);
+        transform: translate(-50%, -5%) rotate3d(1, 0, 0, 75deg) rotate(0deg);
     }
     to {
         left: 50%;
-        transform: translate(-50%, 0) rotate3d(1, 0, 0, 75deg) rotate(360deg);
+        transform: translate(-50%, -5%) rotate3d(1, 0, 0, 75deg) rotate(360deg);
     }
 }
 
@@ -885,8 +885,8 @@ line {
 
 .backgroundIMG {
     position: fixed;
-    opacity: 0.2;
-    filter: blur(3px);
+    opacity: 0.1;
+    filter: blur(2px);
     z-index: 0;
     visibility: hidden;
 }

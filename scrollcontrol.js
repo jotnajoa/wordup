@@ -227,6 +227,7 @@ export const scrollcontroll = () => {
                     'display': 'grid',
                     'grid-auto-flow': 'row'
                 })
+                $('.backgroundIMG').css('opacity', 0)
 
 
                 $('.lastsummary').animate({ opacity: 1 }, 1000)
@@ -258,7 +259,7 @@ export const scrollcontroll = () => {
                     'flex-direction': 'column'
                 })
 
-
+                $('.backgroundIMG').css('opacity', 0.1)
 
             },
             onLeave: () => {
