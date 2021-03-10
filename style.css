@@ -226,7 +226,7 @@ hr {
 
 .firstsong {
     position: absolute;
-    bottom: 2%;
+    bottom: 5%;
     right: 0%;
     color: #e6e6e6;
     font-size: 0.6rem;
@@ -536,14 +536,14 @@ p {
 
 .makinguniques {
     color: #e6e6e6;
-    width: 50%;
+    width: 60%;
     min-width: 200px;
     position: absolute;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 5px;
+    gap: 5px 2px;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 2px;
     justify-content: space-between;
 }
 

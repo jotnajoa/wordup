@@ -23,7 +23,7 @@ With a crime record like Charles Manson`;
     lyrics = lyricstrim.replace(/\\n/gm, ' ')
     lyrics = lyrics.split(' ');
     uniques = [];
-    $('.makinguniques').css('height', `${window.innerHeight*0.5}px`)
+    $('.makinguniques').css('height', `${window.innerHeight*0.45}px`)
     console.log(lyrics);
 
     lyrics.forEach((d, i) => {

@@ -19,7 +19,7 @@ export const scrollcontroll = () => {
                 $('.pjtHeader').animate({ 'opacity': 1 }, 1000)
                 $('.headerBox').animate({ 'opacity': 1 }, 1000)
                 console.log('calling once');
-                $('.vinyl').animate({ 'top': `${window.innerHeight*0.8}` }, 1000)
+                $('.vinyl').animate({ 'top': `${window.innerHeight*0.77}` }, 1000)
 
                 $('.vinyl').css('width', `${newImgwidth+newImgwidth/2}px`)
 
