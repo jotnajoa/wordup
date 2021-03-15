@@ -13,6 +13,8 @@ font-style: normal;
 @media screen and (max-width: 700px) {
     body {
         background-color: rgba(128, 128, 128, 0.26);
+        overflow-y: hidden;
+        overflow-x: hidden;
     }
     .mediastop {
         color: white;
@@ -23,7 +25,9 @@ font-style: normal;
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%);
+        overflow-y: hidden;
+        overflow-x: hidden
     }
     .landingTitle {
         display: none;
