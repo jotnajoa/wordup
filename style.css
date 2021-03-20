@@ -726,7 +726,7 @@ p {
 
 .iconname {
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
     opacity: 0.8
 }
 
