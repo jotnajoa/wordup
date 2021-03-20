@@ -726,7 +726,8 @@ p {
 
 .iconname {
     width: 100%;
-    opacity: 0.8
+    opacity: 0.8;
+    text-align:center
 }
 
 .playingobj {
