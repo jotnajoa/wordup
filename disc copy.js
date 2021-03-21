@@ -38,14 +38,12 @@ export function recoverPlayer() {
 
 <div class="iconname">REWIND</div>
 
-<div class="iconcontainer">
-<svg class="rewindbutton svgicons">
+<svg class="rewindbutton iconcontainer">
     <path class='rewind icon'd="M0,15 l15,-15 l0,30 Z"
     style="stroke: none;"/>
     <path class='rewind icon'd="M20,15 l15,-15 l0,30 Z"
     style="stroke: none;"/>
 </svg>
-</div>
 
 </div>
 
@@ -53,16 +51,14 @@ export function recoverPlayer() {
 
 <div class="iconname">PLAY/PAUSE</div>
 
-<div class="iconcontainer">
-<svg class="playpausebutton svgicons">
-<path class='play icon'd="M0,0 l15,15 l-15,15 Z"
-style="stroke: none;"/>
-<rect class='pause icon' width='3' height='30' x='25'>
-</rect>
-<rect class='pause icon' width='3' height='30' x='30'>
-</rect>
+<svg class="playpausebutton iconcontainer">
+    <path class='play icon'd="M0,0 l15,15 l-15,15 Z"
+    style="stroke: none;"/>
+    <rect class='pause icon' width='3' height='30' x='25'>
+    </rect>
+    <rect class='pause icon' width='3' height='30' x='30'>
+    </rect>
 </svg>
-</div>
 
 </div>
 
@@ -70,16 +66,14 @@ style="stroke: none;"/>
 
 <div class="iconname">EJECT</div>
 
-<div class="iconcontainer">
-<svg class="ejectbutton svgicons">
-<path class='eject icon'd="M20,0 l20,20 l-40,0 Z"
-style="stroke: none;"/>
-<rect class='eject icon'width='40' height=5 y=25>
+<svg class="ejectbutton iconcontainer">
+    <path class='eject icon'd="M20,0 l20,20 l-40,0 Z"
+    style="stroke: none;"/>
+    <rect class='eject icon'width='40' height=5 y=25>
 
-</rect>
+    </rect>
 
 </svg>
-</div>
 
 </div>`);
     $('.playingobj').text('Waiting...')

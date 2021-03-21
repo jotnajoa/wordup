@@ -726,7 +726,7 @@ p {
 
 .iconname {
     width: 100%;
-    /* text-align: center; */
+    text-align: center;
     opacity: 0.8
 }
 
@@ -744,8 +744,13 @@ p {
 .iconcontainer {
     margin-top: 10px;
     display: block;
+    width: 100%;
+    opacity: 0.8;
+    text-align: center
+}
+
+.svgicons {
     width: 30%;
-    opacity: 0.8
 }
 
 .eject {
