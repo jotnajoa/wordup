@@ -255,9 +255,9 @@ hr {
     font-family: realist;
     background: rgba(93, 93, 93, 0.603);
     padding: none;
-    padding-top: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin-top: 15px;
-    height: 350px;
     overflow-y: scroll;
     font-size: 0.3rem;
     opacity: 0.8;
