@@ -3,7 +3,7 @@ let dataTorender;
 let width, height, svg, marginbase, margin, xscale, yscale, colorscale, eqData, xaxis, yaxis, yaxisScale, eqGraph, eqBackground, t;
 let numOfStep = 15;
 let colorStep = 4;
-let playTl = gsap.timeline();
+window.playTl = gsap.timeline();
 let nowreversing = false;
 
 async function byDecades(e) {
@@ -531,12 +531,13 @@ function songImg(selectedEra) {
 
 }
 
-function addPlayerFunction(timeline) {
+export function addPlayerFunction(timeline) {
+
     $('.playpausebutton').on('click', () => {
         timeline.paused(!timeline.paused())
         if (nowreversing) {
             timeline.play();
-            nowreversing != nowreversing
+            nowreversing = !nowreversing
         }
 
     })

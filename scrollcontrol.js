@@ -245,7 +245,7 @@ export const scrollcontroll = () => {
                 $('.lastsummary').animate({ opacity: 0 }, 1000)
                 $('.player').css('opacity', 0),
                     disc.recoverPlayer();
-
+                wordEqualizer.addPlayerFunction(playTl)
 
                 $('.player').css({
                     'bottom': '5%',
