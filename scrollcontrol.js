@@ -130,12 +130,12 @@ export const scrollcontroll = () => {
             onLeave: () => {
                 $('.distribution').animate({ opacity: 0 }, 1000);
                 $('.graphtitle').animate({ opacity: 0 }, 1000)
-                $('.methodology').animate({ opacity: 1 }, 1000)
+                    // $('.methodology').animate({ opacity: 1 }, 1000)
             },
             onEnterBack: () => {
                 $('.distribution').animate({ opacity: 1 }, 1000)
                 $('.graphtitle').animate({ opacity: 1 }, 1000)
-                $('.methodology').animate({ opacity: 0 }, 1000)
+                    // $('.methodology').animate({ opacity: 0 }, 1000)
             }
         }
     })
@@ -146,8 +146,14 @@ export const scrollcontroll = () => {
             start: 'center center',
             pin: '.msg3',
             onEnter: () => {
+                $('.methodology').animate({ opacity: 1 }, 1000)
                 uniquewords.highlightwords();
                 wordEqualizer.addEvents();
+            },
+            onLeaveBack: () => {
+                $('.methodology').css('opacity', 0)
+                uniquewords.recover();
+                uniquewords.addWords();
             }
         }
     })

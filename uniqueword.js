@@ -40,6 +40,7 @@ With a crime record like Charles Manson`;
     console.log(uniques);
 
     wordEl = Array.from($('.words'));
+    // wordEl 은 각각의 단어 셋들이구만
 
 }
 
@@ -82,4 +83,11 @@ export const removeDuplicates = () => {
         }
     })
 
+}
+
+export const recover = () => {
+    // delete all the '.words'
+    $('.words').remove();
+    document.querySelector('.wordcount > p').innerHTML = `<p>Word Count: <span class='totalcount'></span></p>`
+    $('.totalcount').text(`${lyrics.length}`)
 }
