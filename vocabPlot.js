@@ -122,10 +122,12 @@ async function drawAxis() {
 }
 
 export const plotCircle = () => {
+    d3.select('body').style('overflow-y', 'hidden')
     d3.select('.yAxisBG').transition().duration(1000).style('opacity', 1)
     d3.select('.BGgrid').transition().duration(1000).style('opacity', 1)
 
     svg.selectAll('circle').remove()
+
     let circles = svg.append('g').selectAll('circles')
         .data(data)
         .join('circle')
@@ -139,10 +141,11 @@ export const plotCircle = () => {
         .style('fill-opacity', 0.1)
         .transition()
         .duration(500)
-        .delay((d, i) => { return i * 0.2 })
+        .delay((d, i) => {
+            return i * 0.2
+        })
         .attr('cy', (d) => {
             if (d.wordcount > cuttingNumber) {
-
                 return yscaleBG(d.wordcount)
             } else if (d.wordcount < cuttingNumber) {
                 return yscaleSM(d.wordcount)
@@ -151,6 +154,12 @@ export const plotCircle = () => {
         })
         .style('fill-opacity', 0.2)
         .attr('r', 2)
+        .end()
+        .then(() => {
+            console.log('animation just finished')
+            d3.select('body').style('overflow-y', 'auto')
+        })
+
     addGlow()
         // .style('fill', (d) => {
 
@@ -182,7 +191,7 @@ export const leavingQuarter = () => {
     years.forEach((t) => {
 
 
-
+        d3.select('body').style('overflow-y', 'none')
         let targetYear = d3.selectAll(`.year${t}`);
         let targetYearData = targetYear.data()
 
@@ -213,7 +222,7 @@ export const leavingQuarter = () => {
                     .style('fill', '#4B4B4B').style('opacity', 0.15)
             } else {
                 d3.select(this).transition().duration(1000).style('opacity', 0.4).style('fill', '#4FF75C')
-                    .transition().duration(1000).attr('r', 3).on('end', addGlow())
+                    .transition().duration(1000).attr('r', 3).on('end', addGlow()).end().then(() => { d3.select('body').style('overflow-y', 'auto') })
             }
 
         })

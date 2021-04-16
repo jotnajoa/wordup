@@ -150,7 +150,7 @@ function init() {
 
 export async function loadNdraw(e) {
     currentSelect = e;
-
+    console.log(e);
     radiates = [];
     highlightes = [];
     targetYear = e.target.classList[1]
@@ -420,7 +420,7 @@ function showCoverage(e) {
     // drawCoverage(currentSelect)
 }
 
-function showDistribution(e) {
+export function showDistribution(e) {
     $('.wordCoverage').removeClass('switchselected')
     if (!$(e.target).hasClass('switchselected')) {
         $(e.target).addClass('switchselected')

@@ -534,6 +534,7 @@ function songImg(selectedEra) {
 export function addPlayerFunction(timeline) {
 
     $('.playpausebutton').on('click', () => {
+
         timeline.paused(!timeline.paused())
         if (nowreversing) {
             timeline.play();

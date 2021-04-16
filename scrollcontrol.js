@@ -246,6 +246,8 @@ export const scrollcontroll = () => {
                 disc.loadNdraw(currentSelect)
                 $('.wordDistribution').addClass('switchselected')
                 $('.year80s').addClass('yearbtnselected')
+                let initial = { target: { classList: ["", "years80s"] } }
+                disc.showDistribution(initial)
             },
             onLeaveBack: () => {
                 $('.lastsummary').animate({ opacity: 0 }, 1000)
@@ -275,7 +277,6 @@ export const scrollcontroll = () => {
                 $('.player').css('opacity', 0)
             },
             onEnterBack: () => {
-
                 disc.removePlayer();
                 disc.addButtons();
                 disc.addEvent();
