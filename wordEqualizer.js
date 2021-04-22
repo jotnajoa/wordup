@@ -393,6 +393,8 @@ function updateBars(sourceData) {
     //  만약에 3이다치면, 3개의 rect를 더하는데, 그 각각의 frequency는 yscale.domain[i]가 되겠구만
     rectOnlyData.forEach((d) => {
         let ydomain = yscale.domain();
+
+        console.log('ydomain data is ', ydomain);
         let rectToadd;
         let groupnumber = d.group
 
