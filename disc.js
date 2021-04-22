@@ -503,7 +503,7 @@ async function drawCoverage(selected) {
 
         let coverXaxis = grp.append("g")
             .attr('class', 'coverXaxis')
-            .attr('transform', `translate(${0},${height+margin.top})`)
+            .attr('transform', `translate(${margin.left},${height+margin.top})`)
             .call(d3.axisBottom(xScale).tickFormat(x => `${x}`))
 
         // var x_axis = d3.axisBottom(xScale).ticks(4)
@@ -511,7 +511,7 @@ async function drawCoverage(selected) {
 
         let coverYaxis = grp.append("g")
             .attr('class', 'coverYaxis')
-            .attr('transform', `translate(${0},${margin.top})`)
+            .attr('transform', `translate(${margin.left},${margin.top})`)
             .call(d3.axisLeft(yScale).tickFormat(y => `${y*100}`));
 
         // grp.append("path")
@@ -627,12 +627,12 @@ async function drawCoverage(selected) {
 
         let coverXaxis = grp.append("g")
             .attr('class', 'coverXaxis')
-            .attr('transform', `translate(${0},${height+margin.top})`)
+            .attr('transform', `translate(${margin.left},${height+margin.top})`)
             .call(d3.axisBottom(xScale).tickFormat(x => `${x}`))
 
         let coverYaxis = grp.append("g")
             .attr('class', 'coverYaxis')
-            .attr('transform', `translate(${0},${margin.top})`)
+            .attr('transform', `translate(${margin.left},${margin.top})`)
             .call(d3.axisLeft(yScale).tickFormat(y => `${y*100}`));
 
         // grp.append("path")
