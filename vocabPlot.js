@@ -47,7 +47,7 @@ async function drawAxis() {
 
 
 
-    $('.graphtitle').css('top', `${margin.top/3}px`)
+    // $('.graphtitle').css('top', `${margin.top/3}px`)
 
     xscale = d3.scaleLinear()
         .domain([1979, 2022])
