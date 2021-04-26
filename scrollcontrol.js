@@ -81,6 +81,7 @@ export const scrollcontroll = () => {
             start: `top+=${pageSize*0.45}px center`,
             end: `top+=${pageSize*6}px top`,
             pin: '.distribution',
+            marker: true,
             onEnter: () => {
                 $('.distribution').animate({ opacity: 1 }, 1000)
                 $('.graphtitle').animate({ opacity: 1 }, 1000)

@@ -33,10 +33,6 @@ async function drawAxis() {
 
     maxcount = d3.max(vocab);
 
-
-
-
-
     margin = {
         top: marginbase * 0.1,
         bottom: marginbase * 0.1,
@@ -57,7 +53,22 @@ async function drawAxis() {
         .domain([0, maxcount + 200])
         .range([height - margin.top - margin.bottom, 0])
 
+    // lets make label
 
+    svg.append('text')
+        .classed('axislabel', true)
+        .attr('transform', `translate(${width/2},${height})`)
+        .text('Date')
+        .style('fill', '#aaaaaa')
+
+    svg.append('text')
+        .attr("transform", "rotate(-90)")
+        .classed('axislabel', true)
+        .attr("y", 0.5 * margin.left)
+        .attr("x", 0 - (height / 2))
+        .style("text-anchor", "middle")
+        .text('Vocab Count')
+        .style('fill', '#aaaaaa')
 
 
     yscaleSM = d3.scaleLinear()

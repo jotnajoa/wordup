@@ -6,6 +6,11 @@ import * as disc from './disc.js'
 var tl = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 0.1 })
 
 
+
+
+
+let leftmargin = 0.2 * d3.min([parseInt($('.distribution').css('width').split('px')[0]), parseInt($('.distribution').css('height').split('px')[0])])
+
 let tl1 = gsap.timeline();
 window.currentSelect = {
     target: {
@@ -89,7 +94,9 @@ $('.videocontainer').css('width', `${window.innerWidth}px`)
 $('.graphbox').css('top', `${pageSize*6}px`);
 $('.graphbox').css('left', `0%`);
 $('.graphbox').css('height', `${pageSize*1}px`);
-
+$('.graphtitle').css('left', `${leftmargin}px`)
+$('.graphtitle').css('top', `${leftmargin}px`)
+$('.methodTitle').css('top', `${leftmargin}px`)
 
 $('.msg1').css('top', `${pageSize*8}px`)
 $('.msg2').css('top', `${pageSize*10}px`)
