@@ -68,7 +68,7 @@ async function drawAxis() {
         .domain([cuttingNumber, maxcount + 200])
         .range([yscaleSM(cuttingNumber), 0])
 
-    let xAxis = d3.axisBottom().scale(xscale).ticks(12).tickSizeOuter(0);
+    let xAxis = d3.axisBottom().scale(xscale).ticks(12).tickSizeOuter(0).tickFormat(d3.format("d"));;
 
     let yAxisSM = d3.axisLeft().scale(yscaleSM).tickSizeOuter(0);
 
