@@ -111,7 +111,7 @@ export function addButtons() {
             $(`.controllbuttons:eq(${i})`).append(`<div class='yearbtn year${iconarray[i]}'></div>`)
         }
     }
-    $('.playingobj').text(`Dispersion of Words`)
+    $('.playingobj').text(`Vocabulary Dispersion`)
 }
 // addButtons()
 

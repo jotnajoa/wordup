@@ -91,12 +91,23 @@ $('.videocontainer').css('height', `${pageSize}px`)
 $('.videodescription').css('top', `${pageSize*1.6}px`)
 $('.videoclip').css('width', `${window.innerWidth}px`)
 $('.videocontainer').css('width', `${window.innerWidth}px`)
+
+
 $('.graphbox').css('top', `${pageSize*6}px`);
 $('.graphbox').css('left', `0%`);
 $('.graphbox').css('height', `${pageSize*1}px`);
 $('.graphtitle').css('left', `${leftmargin}px`)
 $('.graphtitle').css('top', `${leftmargin}px`)
+
+
+$('.methodology').css('top', `${pageSize*11.5}px`)
+$('.methodology').css('left', `0%`);
+$('.methodology').css('height', `${pageSize*1}px`);
+
+$('.methodTitle').css('left', `${leftmargin}px`)
 $('.methodTitle').css('top', `${leftmargin}px`)
+
+$('.makinguniques').css('left', `${leftmargin}px`)
 
 $('.msg1').css('top', `${pageSize*8}px`)
 $('.msg2').css('top', `${pageSize*10}px`)
@@ -119,15 +130,10 @@ let uniqueWidth = $('.makinguniques').width()
 
 
 
-$('.methodology').css('top', `${pageSize*0.05}px`).css('left', `${pageSize*0.3}px`)
-$('.makinguniques').css('top', `${pageSize*0.1}px`).css('left', `0px`)
+$('.makinguniques').css('top', `${leftmargin}px`)
 $('.uniqueexample').css('top', `${window.innerHeight*0.7}px`).css('left', `90%`)
 let boxposition = $('.makinguniques').position()
-console.log(boxposition);
-$('.methodTitle').css({
-    'width': `${uniqueWidth}px`,
-    'left': `${pageSize*0.2}px`
-})
+
 
 vocabPlot.vocabPlot()
 scroll.scrollcontroll()

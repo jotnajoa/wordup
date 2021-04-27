@@ -108,6 +108,44 @@ export const scrollcontroll = () => {
         }
     })
 
+    tl1.to('.methodTitle', {
+        scrollTrigger: {
+            trigger: '.methodology',
+            scrub: true,
+            start: 'center center',
+            end: `+=${pageSize*3}px top`,
+            pin: '.methodTitle'
+        }
+    })
+
+    tl1.to('.makinguniques', {
+        scrollTrigger: {
+            trigger: '.methodology',
+            scrub: true,
+            onEnter: () => {
+                $('.methodology').animate({ opacity: 1 }, 1000)
+                    // uniquewords.highlightwords();
+                    // wordEqualizer.addEvents();
+            },
+            onEnterBack: () => {
+                $('.methodology').animate({ opacity: 1 }, 500)
+                    // uniquewords.highlightwords();
+                    // wordEqualizer.addEvents();
+            },
+            onLeave: () => {
+                $('.methodology').animate({ opacity: 0 }, 500)
+            },
+            onLeaveBack: () => {
+                $('.methodology').css('opacity', 0)
+                    // uniquewords.recover();
+                    // uniquewords.addWords();
+            },
+            start: `top+=${pageSize*0.45}px center`,
+            end: `top+=${pageSize*3}px top`,
+            pin: '.makinguniques'
+        }
+    })
+
     tl1.to('.msg1', {
         scrollTrigger: {
             trigger: '.msg1',
@@ -131,15 +169,14 @@ export const scrollcontroll = () => {
             onLeave: () => {
                 $('.distribution').animate({ opacity: 0 }, 1000);
                 $('.graphtitle').animate({ opacity: 0 }, 1000)
-                    // $('.methodology').animate({ opacity: 1 }, 1000)
             },
             onEnterBack: () => {
                 $('.distribution').animate({ opacity: 1 }, 1000)
                 $('.graphtitle').animate({ opacity: 1 }, 1000)
-                    // $('.methodology').animate({ opacity: 0 }, 1000)
             }
         }
     })
+
 
     tl1.to('.msg3', {
         scrollTrigger: {
@@ -147,12 +184,12 @@ export const scrollcontroll = () => {
             start: 'center center',
             pin: '.msg3',
             onEnter: () => {
-                $('.methodology').animate({ opacity: 1 }, 1000)
+                // $('.methodology').animate({ opacity: 1 }, 1000)
                 uniquewords.highlightwords();
                 wordEqualizer.addEvents();
             },
             onLeaveBack: () => {
-                $('.methodology').css('opacity', 0)
+                // $('.methodology').css('opacity', 0)
                 uniquewords.recover();
                 uniquewords.addWords();
             }
@@ -168,16 +205,19 @@ export const scrollcontroll = () => {
                 uniquewords.removeDuplicates()
             },
             onLeave: () => {
-                $('.methodology').css('position', 'relative');
-                $('body').css('overflow-x', 'hidden')
+                // $('body').css('overflow-x', 'hidden')
             },
             onEnterBack: () => {
-                $('.methodology').css('position', 'fixed');
-                $('body').css('overflow-x', 'auto')
+                // $('body').css('overflow-x', 'auto')
             },
 
         }
     })
+
+
+
+
+
 
     tl1.to('.decadeselection', {
         scrollTrigger: {

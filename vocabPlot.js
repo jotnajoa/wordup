@@ -55,11 +55,11 @@ async function drawAxis() {
 
     // lets make label
 
-    svg.append('text')
-        .classed('axislabel', true)
-        .attr('transform', `translate(${width/2},${height})`)
-        .text('Date')
-        .style('fill', '#aaaaaa')
+    // svg.append('text')
+    //     .classed('axislabel', true)
+    //     .attr('transform', `translate(${margin.left},${height})`)
+    //     .text('Date')
+    //     .style('fill', '#aaaaaa')
 
     svg.append('text')
         .attr("transform", "rotate(-90)")
@@ -104,7 +104,7 @@ async function drawAxis() {
 
     d3.select('.xAxis')
         .selectAll('text')
-        .attr('transform', 'translate(0,10)rotate(-30)')
+        .attr('transform', 'translate(0,10)')
 
     svg.append("g")
         .attr("class", "BGgrid")
