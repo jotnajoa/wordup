@@ -775,6 +775,7 @@ p {
     position: absolute;
     top: 0px;
     font-family: Sofia-pro, sans-serif;
+    left: -15%;
 }
 
 #mySvg {
