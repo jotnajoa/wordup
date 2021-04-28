@@ -780,6 +780,7 @@ p {
 #mySvg {
     position: absolute;
     top: 10%;
+    left: -15%;
     font-family: Sofia-pro, sans-serif;
     display: none;
 }
