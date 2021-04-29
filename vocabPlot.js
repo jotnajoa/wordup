@@ -1,5 +1,6 @@
 let data, width, height, svg, marginbase, margin, xscale, yscale, maxcount, yscaleSM, yscaleBG;
 let cuttingNumber = 600;
+let firstanimation = true;
 
 export const vocabPlot = async() => {
 
@@ -176,11 +177,14 @@ export const plotCircle = () => {
         .then(() => {
             console.log('animation just finished')
             d3.select('body').style('overflow-y', 'auto')
-            let threeword = ['Look', 'Hook', 'Baby'];
-            threeword.forEach((d, i) => {
-                setTimeout(() => { $('.msg1').append(`<p class='threewords'>${d}</p>`) }, i * 500)
+            if (firstanimation) {
+                let threeword = ['Look', 'Hook', 'Baby'];
+                threeword.forEach((d, i) => {
+                    setTimeout(() => { $('.msg1').append(`<p class='threewords'>${d}</p>`) }, i * 500)
+                })
+            }
 
-            })
+            firstanimation = false;
 
         })
 
