@@ -603,7 +603,7 @@ p {
 
 .unique {
     opacity: 1;
-    color: rgba(251, 255, 0, 0.753);
+    color: #4FF75C;
     animation: litup 6s
 }
 
@@ -611,13 +611,31 @@ p {
     opacity: 0.1;
 }
 
+.threewords {
+    color: #4FF75C;
+    animation: fadein 1s forwards
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
 @keyframes litup {
     from {
         color: #e6e6e6;
     }
     to {
-        color: rgb(251, 255, 0);
+        color: #4FF75C;
     }
+}
+
+#minimumcount {
+    color: #4FF75C;
 }
 
 .uniqueTitle {

@@ -32,6 +32,13 @@ async function drawAxis() {
     })
 
     maxcount = d3.max(vocab);
+    let mincount = d3.min(vocab);
+
+    data.forEach((d) => {
+        if (+d.wordcount == 3) {
+            console.log(d, 'this is the minimum count');
+        }
+    })
 
     margin = {
         top: marginbase * 0.1,
@@ -169,6 +176,12 @@ export const plotCircle = () => {
         .then(() => {
             console.log('animation just finished')
             d3.select('body').style('overflow-y', 'auto')
+            let threeword = ['Look', 'Hook', 'Baby'];
+            threeword.forEach((d, i) => {
+                setTimeout(() => { $('.msg1').append(`<p class='threewords'>${d}</p>`) }, i * 500)
+
+            })
+
         })
 
     addGlow()

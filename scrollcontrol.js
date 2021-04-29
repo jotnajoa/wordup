@@ -19,10 +19,9 @@ export const scrollcontroll = () => {
                 $('.pjtHeader').animate({ 'opacity': 1 }, 1000)
                 $('.headerBox').animate({ 'opacity': 1 }, 1000)
                 console.log('calling once');
+
                 $('.vinyl').animate({ 'top': `${window.innerHeight*0.80}` }, 1000)
-
                 $('.vinyl').css('width', `${newImgwidth+newImgwidth/2}px`)
-
                 $('.vinyl').css('animation', 'recordTransition 1.5s')
 
                 setTimeout(() => {
@@ -40,6 +39,11 @@ export const scrollcontroll = () => {
             onLeaveBack: () => {
                 $('.pjtHeader').animate({ 'opacity': 0 }, 1000)
                 $('.headerBox').animate({ 'opacity': 0 }, 1000)
+
+                // $('.vinyl').animate({ 'transform': `${0}px` }, 1000)
+                // $('.vinyl').css('animation', 'recordTransition 1.5s')
+
+
             }
         },
         opacity: 0.4,
