@@ -774,13 +774,13 @@ p {
     position: absolute;
     top: 0px;
     font-family: Sofia-pro, sans-serif;
-    left: -15%;
+    left: -5%;
 }
 
 #mySvg {
     position: absolute;
     top: 10%;
-    left: -15%;
+    left: -5%;
     font-family: Sofia-pro, sans-serif;
     display: none;
 }
