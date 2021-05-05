@@ -73,7 +73,7 @@ async function drawAxis() {
         .attr("transform", "rotate(-90)")
         .classed('axislabel', true)
         .attr("y", 0.5 * margin.left)
-        .attr("x", 0 - (height / 2))
+        .attr("x", 0 - (height / 2 + margin.top))
         .style("text-anchor", "middle")
         .text('Vocab Count')
         .style('fill', '#aaaaaa')

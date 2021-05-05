@@ -79,10 +79,11 @@ window.contentWidth = 0;
 contentWidth = $('.contents').width()
 console.log(contentWidth);
 
+let vinylsize = $('.vinyl').width();
 
 $('.contents').css('height', `${pageSize*20}px`)
 $('.vinyl').css('top', `${pageSize*2/5}px`)
-$('.vinyl').css('left', `${window.innerWidth/2-250}px`)
+$('.vinyl').css('left', `${window.innerWidth/2-vinylsize/2}px`)
 $('.subTitle').css('top', `${pageSize*1/5}px`)
 
 
