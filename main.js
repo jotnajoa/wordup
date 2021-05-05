@@ -82,7 +82,7 @@ console.log(contentWidth);
 
 $('.contents').css('height', `${pageSize*20}px`)
 $('.vinyl').css('top', `${pageSize*2/5}px`)
-$('.vinyl').css('left', `${window.innerWidth/2-150}px`)
+$('.vinyl').css('left', `${window.innerWidth/2-250}px`)
 $('.subTitle').css('top', `${pageSize*1/5}px`)
 
 

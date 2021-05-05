@@ -68,8 +68,10 @@ export const scrollcontroll = () => {
             trigger: '.videocontainer',
             scrub: true,
             start: 'center center',
-            end: `+=${pageSize*2}px top`,
-            pin: '.videodescription'
+            end: `+=${pageSize*2.1}px top`,
+            pin: '.videodescription',
+            onLeave: () => { $('.videocontainer').css('opacity', 0) },
+            onEnterBack: () => { $('.videocontainer').css('opacity', 1) }
         },
         opacity: 1,
     })

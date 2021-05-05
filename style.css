@@ -180,7 +180,7 @@ body {
 }
 
 .contents>.vinyl {
-    width: 300px;
+    width: 500px;
     display: block;
     position: fixed;
     filter: blur(0.5px);
@@ -232,7 +232,7 @@ hr {
     position: absolute;
     width: 100vw;
     min-width: 1000px;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 .videodescription {
@@ -262,7 +262,7 @@ hr {
     opacity: 0.8;
     border-radius: 5px;
     overflow-y: hidden;
-    height: 50%;
+    height: 70%;
 }
 
 .actuallyrics>.lyrics {
@@ -306,7 +306,7 @@ video {
     opacity: 0;
     /* width: 1500px; */
     position: absolute;
-    /* left: -20%; */
+    top: -20%;
 }
 
 .graphbox {
@@ -790,15 +790,15 @@ p {
 
 #myCanvas {
     position: absolute;
-    top: 0px;
+    top: 10%;
     font-family: Sofia-pro, sans-serif;
-    left: -5%;
+    left: -20%;
 }
 
 #mySvg {
     position: absolute;
-    top: 10%;
-    left: -5%;
+    top: 20%;
+    left: -20%;
     font-family: Sofia-pro, sans-serif;
     display: none;
 }
@@ -841,7 +841,7 @@ p {
     width: 40%;
     height: 80%;
     right: 0%;
-    top: 10%;
+    top: 20%;
 }
 
 .canvasDesc {
@@ -875,7 +875,7 @@ p {
     width: 40%;
     height: 60%;
     right: 0%;
-    top: 55%;
+    top: 70%;
 }
 
 .top10Desc {

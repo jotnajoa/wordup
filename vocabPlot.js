@@ -180,7 +180,7 @@ export const plotCircle = () => {
             if (firstanimation) {
                 let threeword = ['Look', 'Hook', 'Baby'];
                 threeword.forEach((d, i) => {
-                    setTimeout(() => { $('.msg1').append(`<p class='threewords'>${d}</p>`) }, i * 500)
+                    setTimeout(() => { $('.msg1').append(`<p class='threewords'>${d}</p>`) }, i * 500 + 3000)
                 })
             }
 
